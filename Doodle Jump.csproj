@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{215FB2D6-DDD3-43E7-ADAB-6923E6EE2C34}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Doodle_Jump</RootNamespace>
+    <AssemblyName>Doodle Jump</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Bonus.cs" />
+    <Compile Include="Classes\Bullet.cs" />
+    <Compile Include="Classes\Enemy.cs" />
+    <Compile Include="Classes\Physics.cs" />
+    <Compile Include="Classes\Platform.cs" />
+    <Compile Include="Classes\PlatformController.cs" />
+    <Compile Include="Classes\Player.cs" />
+    <Compile Include="Classes\Transform.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleGirl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodlePirate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleShot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleSleepwear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterDragonfly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterFly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterOne-eyed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonsterThree-eyed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlueBlot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BluePlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DarkDirtyDrop.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NightBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doodle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PastelSky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PastelSky600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelBigMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelDoodle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelOne-eyed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelOval.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelSpider.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelThree-eyed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PixelFly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleHelicopter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleJetPac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HatHelicopter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BrokenPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlateMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreyPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JetPac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OvalMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpiderMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trampoline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhitePlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Triangle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FrontPastelSky600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frontPastelSky600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettignsBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AwfulMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BirdMonster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlackPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DirtyPlate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleBandana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleBandanaShot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleFrank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleFrankLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleFrankShot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleGhost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleGhostLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleGhostShot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleNinja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleNinjaLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DoodleNinjaShot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ParrotMonster.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
