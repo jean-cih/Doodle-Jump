@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -66,7 +66,11 @@ namespace Doodle_Jump.Classes
                 {
                     PlatformController.platforms.RemoveAt(i);
                 }
-                PlatformController.startPlatformPositionY = 200;
+                for (int i = 0; i < PlatformController.bonuses.Count; i++)
+                {
+                    PlatformController.bonuses.Clear();
+                }
+                PlatformController.startPlatformPositionY = 150;
                 PlatformController.GenereteStartSequence();
                 PlatformController.startPlatformPositionY = -50;
                 PlatformController.GenerateRandomPlatform();
