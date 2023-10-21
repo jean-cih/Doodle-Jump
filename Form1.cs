@@ -1,4 +1,4 @@
-﻿using Doodle_Jump.Classes;
+using Doodle_Jump.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +37,7 @@ namespace Doodle_Jump
             buttonExit.Visible = false;
             buttonRestart.Visible = false;
             labelLose.Visible = false;
+            labelWin.Visible = false;
             KeyPreview = true;
 
 
@@ -88,23 +89,33 @@ namespace Doodle_Jump
                     player.sprite = Properties.Resources.DoodleShot;
                     break;
             }
-            if (player.physics.transform.position.X < -10)
+            if (player.physics.transform.position.X < -20)
             {
-                player.physics.transform.position.X = 300;
+                player.physics.transform.position.Y -= 10;
+                player.physics.transform.position.X = 320;
             }
-            if (player.physics.transform.position.X > 300)
+            if (player.physics.transform.position.X > 320)
             {
+                player.physics.transform.position.Y -= 10;
                 player.physics.transform.position.X = 0;
             }
-           
         }
 
         private void Update(object sender, EventArgs e) 
         {
-            this.Text = "Doodle Jump: Score - " + PlatformController.score;
+            this.Text = "Score: " + PlatformController.score + "/10000";
+
+            if(PlatformController.score >= 10000)
+            {
+                labelWin.Visible = true;
+                buttonRestart.Visible = true;
+                buttonRestart.Text = "Play";
+            }
+
 
             if ((player.physics.transform.position.Y >= PlatformController.platforms[0].transform.position.Y + 300) || player.physics.StandardCollidePlayerWithObjects(true, false)) 
             {
+                buttonRestart.Text = "Play again";
                 labelLose.Visible = true;
                 labelScore.Visible = true;
                 buttonRestart.Visible = true;
@@ -290,6 +301,7 @@ namespace Doodle_Jump
             buttonRestart.Visible = false;
             labelLose.Visible = false;
             labelScore.Visible = false;
+            labelWin.Visible = false;
             Init();
         }
 
@@ -317,6 +329,10 @@ namespace Doodle_Jump
         private void labelScore_Click(object sender, EventArgs e)
         {
   
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
         }
     }
 }
