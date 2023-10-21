@@ -103,7 +103,7 @@ namespace Doodle_Jump.Classes
         public static void CreateEnemy(Platform platform)
         {
             Random rand = new Random();
-            var enemyType = rand.Next(12, 13);
+            var enemyType = rand.Next(1, 13);
 
                 switch (enemyType)
                 {
