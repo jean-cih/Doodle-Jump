@@ -133,6 +133,7 @@ namespace Doodle_Jump
                 labelWin.Visible = true;
                 buttonRestart.Visible = true;
                 buttonRestart.Text = "Play";
+                PlatformController.bullets.Clear();
             }
 
 
