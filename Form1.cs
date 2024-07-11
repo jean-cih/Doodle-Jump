@@ -303,11 +303,6 @@ namespace Doodle_Jump
             player.DrawSprite(g);
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonStart_Click(object sender, EventArgs e)
         {    
             Init();
@@ -333,12 +328,7 @@ namespace Doodle_Jump
             labelWin.Visible = false;
             Init();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.SettingsBack;
@@ -353,15 +343,6 @@ namespace Doodle_Jump
             buttonControl.Visible = true;
             buttonExit.Visible = false;
             this.BackgroundImage = Properties.Resources.frontPastelSky6001;
-        }
-
-        private void labelScore_Click(object sender, EventArgs e)
-        {
-  
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
         }
     }
 }
